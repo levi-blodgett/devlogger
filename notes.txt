@@ -2,3 +2,5 @@ ng new devlogger
 ng g c components/navbar --skipTests
 ng g c components/log-form --skipTests
 ng g c components/logs --skipTests
+npm install bootstrap popper.js jquery font-awesome
+Edited angular.json file to add styles and scripts - restarted server since it is required after editing angular.json
