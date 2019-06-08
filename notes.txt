@@ -4,3 +4,18 @@ ng g c components/log-form --skipTests
 ng g c components/logs --skipTests
 npm install bootstrap popper.js jquery font-awesome
 Edited angular.json file to add styles and scripts - restarted server since it is required after editing angular.json
+ngOnInit = lifecycle method, runs when components initialize
+To generate service:
+ng g s services/log --skipTests
+(The --module or --save aren't needed as that functionality is provided in the log.service.ts file for A6+ with the code: 
+"
+@Injectable({
+  providedIn: 'root'
+})
+"
+)
+
+When you bring in a service it has to be inject as a dependency into your constructor like so (logs.component.ts):
+"
+constructor(private logService: LogService) { }
+"
